@@ -6,6 +6,8 @@
 
 </div>
 
+## Authors
+Rohan Gandhi, Aleera Ewan
 
 ## Sections
 
