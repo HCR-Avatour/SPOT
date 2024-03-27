@@ -1,0 +1,18 @@
+<!--
+    Personal Robotics Laboratory - Imperial College London, 2022
+    Author: Rodrigo Chacon Quesada (rac17@ic.ac.uk)
+    Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+-->
+<launch>
+
+    <arg name="username" default="" />
+    <arg name="password" default="" />
+    <arg name="hostname" default="192.168.80.3" />
+    <!-- <arg name="max_frequency" default="60" /> -->
+    <!-- <arg name="logging" default="hi" /> -->
+	<arg name="stairs_mode" default ="Y" />
+
+	<node pkg="spot_driver" type="joystick_teleop.py" name="joystick_teleop" args="--stairs_mode $(arg stairs_mode) --username $(arg username) --password $(arg password) $(arg hostname)" output="screen"/>
+	
+</launch>
